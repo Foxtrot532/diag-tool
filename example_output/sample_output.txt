@@ -1,0 +1,1500 @@
+
+=== System Overview ===
+
+Generated: 2025-10-20T11:00:06.062986 UTC
+
+Linux MyLinuxVM 6.12.0-140.el10.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025 x86_64 GNU/Linux
+
+NAME="CentOS Stream"
+VERSION="10 (Coughlan)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="10"
+PLATFORM_ID="platform:el10"
+PRETTY_NAME="CentOS Stream 10 (Coughlan)"
+ANSI_COLOR="0;31"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:centos:centos:10"
+HOME_URL="https://centos.org/"
+VENDOR_NAME="CentOS"
+VENDOR_URL="https://centos.org/"
+BUG_REPORT_URL="https://issues.redhat.com/"
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux 10"
+REDHAT_SUPPORT_PRODUCT_VERSION="CentOS Stream"
+
+ Static hostname: MyLinuxVM
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: cf82ffa632d045b08008b293bf0e50a0
+         Boot ID: 342642fde2ff47ad8429a32d39ba812d
+    Product UUID: a6e93344-e979-994e-83ca-d40f745f4782
+  Virtualization: oracle
+Operating System: CentOS Stream 10 (Coughlan)
+     CPE OS Name: cpe:/o:centos:centos:10
+          Kernel: Linux 6.12.0-140.el10.x86_64
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+ Hardware Serial: VirtualBox-4433e9a6-79e9-4e99-83ca-d40f745f4782
+Firmware Version: VirtualBox
+   Firmware Date: Fri 2006-12-01
+    Firmware Age: 18y 10month 2w 5d
+
+=== Resource Usage (snapshot) ===
+
+uptime & load:
+ 16:30:06 up 1 min,  4 users,  load average: 1.26, 0.41, 0.14
+
+
+memory:
+               total        used        free      shared  buff/cache   available
+Mem:           3.6Gi       1.3Gi       1.8Gi        21Mi       708Mi       2.2Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+
+disk usage:
+Filesystem          Type      Size  Used Avail Use% Mounted on
+/dev/mapper/cs-root xfs        17G  5.3G   12G  32% /
+devtmpfs            devtmpfs  1.8G     0  1.8G   0% /dev
+tmpfs               tmpfs     1.8G   84K  1.8G   1% /dev/shm
+tmpfs               tmpfs     731M  9.3M  722M   2% /run
+tmpfs               tmpfs     1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+/dev/sda2           xfs       960M  463M  498M  49% /boot
+tmpfs               tmpfs     366M  144K  366M   1% /run/user/1000
+/dev/sr0            iso9660    59M   59M     0 100% /run/media/ajithesh2002/VBox_GAs_7.1.12
+tmpfs               tmpfs     366M   60K  366M   1% /run/user/0
+
+
+block devices:
+NAME         SIZE FSTYPE      MOUNTPOINT                              ROTA
+sda           20G                                                        1
+├─sda1         1M                                                        1
+├─sda2         1G xfs         /boot                                      1
+└─sda3        19G LVM2_member                                            1
+  ├─cs-root   17G xfs         /                                          1
+  └─cs-swap    2G swap        [SWAP]                                     1
+sr0         58.5M iso9660     /run/media/ajithesh2002/VBox_GAs_7.1.12    0
+
+
+IO stats (iostat - requires sysstat):
+[ERROR] Command failed: Command 'iostat -xz 1 1' returned non-zero exit status 127.
+Output:
+/bin/sh: line 1: iostat: command not found
+
+
+Top CPU processes (ps):
+    PID    PPID CMD                         %MEM %CPU
+   3757       1 /usr/lib/systemd/systemd-ho  0.2 58.3
+   3734       1 /usr/lib/systemd/systemd --  0.3 31.4
+   3753    3752 python3 /home/ajithesh2002/  0.3 23.8
+   2646    2515 /usr/bin/gnome-shell         9.8 13.4
+   2902    2737 /usr/libexec/ibus-extension  0.8 10.5
+   3551    2515 /usr/bin/ptyxis --gapplicat  5.8  4.8
+   2016       1 /usr/libexec/packagekitd     4.7  4.8
+      1       0 /usr/lib/systemd/systemd --  1.1  3.7
+   2809    2620 /usr/bin/gnome-software --g  2.7  3.3
+   3724    3522 /usr/libexec/tracker-extrac  0.7  1.9
+   2515       1 /usr/lib/systemd/systemd --  0.3  1.7
+   3701       1 /usr/libexec/fprintd         0.2  1.6
+   1020       1 /usr/lib/polkit-1/polkitd -  0.2  1.5
+   3522    2515 /usr/libexec/tracker-miner-  0.7  0.9
+
+=== Network Info ===
+
+Interfaces:
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 fd17:625c:f037:2:a00:27ff:feed:a5df/64 fe80::a00:27ff:feed:a5df/64 
+
+
+Routing table:
+default via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+
+
+Network connections (ss -tunlp):
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                 
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=1049,fd=5))      
+udp   UNCONN 0      0            0.0.0.0:5353      0.0.0.0:*    users:(("avahi-daemon",pid=1012,fd=12))
+udp   UNCONN 0      0              [::1]:323          [::]:*    users:(("chronyd",pid=1049,fd=6))      
+udp   UNCONN 0      0               [::]:5353         [::]:*    users:(("avahi-daemon",pid=1012,fd=13))
+tcp   LISTEN 0      4096       127.0.0.1:631       0.0.0.0:*    users:(("cupsd",pid=1396,fd=8))        
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=1397,fd=7))         
+tcp   LISTEN 0      4096           [::1]:631          [::]:*    users:(("cupsd",pid=1396,fd=7))        
+tcp   LISTEN 0      4096               *:9090            *:*    users:(("systemd",pid=1,fd=80))        
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=1397,fd=8))         
+
+
+DNS (resolv.conf):
+# Generated by NetworkManager
+nameserver 10.0.2.3
+
+
+Firewall status (firewall-cmd --state or iptables -L):
+running
+
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+
+NetworkManager status:
+active
+
+
+Active connections (nmcli):
+enp0s3:enp0s3:activated
+lo:lo:activated
+
+=== Systemd Services (failed/disabled) ===
+
+● mcelog.service loaded failed failed Machine Check Exception Logging Daemon
+
+
+Top services by memory/cpu:
+    PID UNIT                            %MEM %CPU CMD
+   2646 user@1000.service                9.8 13.2 /usr/bin/gnome-shell
+   3551 user@1000.service                5.8  4.7 /usr/bin/ptyxis --gapplication-service
+   2016 packagekit.service               4.7  4.7 /usr/libexec/packagekitd
+   2809 user@1000.service                2.7  3.2 /usr/bin/gnome-software --gapplication-service
+   3303 user@1000.service                2.1  0.7 /usr/libexec/mutter-x11-frames
+   3187 user@1000.service                1.4  0.5 /usr/libexec/gsd-xsettings
+   1127 firewalld.service                1.2  0.7 /usr/bin/python3 -sP /usr/sbin/firewalld --nofork --nopid
+   3036 user@1000.service                1.1  0.4 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.08ZOE3 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients -enable-ei-portal
+      1 init.scope                       1.1  3.7 /usr/lib/systemd/systemd --switched-root --system --deserialize=43 rhgb
+   2785 user@1000.service                1.1  0.5 /usr/libexec/evolution-data-server/evolution-alarm-notify
+   3291 user@1000.service                0.9  0.6 /usr/libexec/xdg-desktop-portal-gnome
+   2902 user@1000.service                0.8 10.3 /usr/libexec/ibus-extension-gtk3
+   3462 user@1000.service                0.8  0.2 /usr/libexec/gnome-control-center-search-provider
+   1399 tuned.service                    0.8  0.3 /usr/bin/python3 -Es /usr/sbin/tuned -l -P
+   1559 tuned-ppd.service                0.7  0.1 /usr/bin/python3 -Es /usr/sbin/tuned-ppd -l
+   3522 user@1000.service                0.7  0.9 /usr/libexec/tracker-miner-fs-3
+   2930 user@1000.service                0.7  0.3 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver
+   2733 user@1000.service                0.7  0.4 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications
+   3724 user@1000.service                0.7  1.4 /usr/libexec/tracker-extract-3 --socket-fd 3
+
+
+Recent journal (last 500 lines):
+Oct 20 16:29:24 MyLinuxVM gdm-password][2503]: gkr-pam: unable to locate daemon control file
+Oct 20 16:29:24 MyLinuxVM gdm-password][2503]: gkr-pam: stashed password to try later in open session
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Oct 20 16:29:25 MyLinuxVM systemd-logind[1030]: New session 2 of user ajithesh2002.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+Oct 20 16:29:25 MyLinuxVM systemd-logind[1030]: New session 3 of user ajithesh2002.
+Oct 20 16:29:25 MyLinuxVM (systemd)[2515]: pam_unix(systemd-user:session): session opened for user ajithesh2002(uid=1000) by ajithesh2002(uid=0)
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Queued start job for default target default.target.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Created slice app.slice - User Application Slice.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Started grub-boot-success.timer - Mark boot as successful after the user session has run 2 minutes.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of User's Temporary Directories.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target paths.target - Paths.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target timers.target - Timers.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Listening on pipewire-pulse.socket - PipeWire PulseAudio.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Listening on pipewire.socket - PipeWire Multimedia System Sockets.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Starting systemd-tmpfiles-setup.service - Create User Files and Directories...
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target sockets.target - Sockets.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Finished systemd-tmpfiles-setup.service - Create User Files and Directories.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target basic.target - Basic System.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: gnome-initial-setup-copy-worker.service - GNOME Initial Setup Copy Worker was skipped because of an unmet condition check (ConditionPathExists=!/home/ajithesh2002/.config/gnome-initial-setup-done).
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Started user@1000.service - User Manager for UID 1000.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target default.target - Main User Target.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Startup finished in 367ms.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Started session-2.scope - Session 2 of User ajithesh2002.
+Oct 20 16:29:25 MyLinuxVM gdm-password][2503]: pam_unix(gdm-password:session): session opened for user ajithesh2002(uid=1000) by ajithesh2002(uid=0)
+Oct 20 16:29:25 MyLinuxVM gdm-password][2503]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Oct 20 16:29:27 MyLinuxVM gsd-media-keys[2063]: Unable to get default source
+Oct 20 16:29:27 MyLinuxVM gsd-media-keys[2063]: Unable to get default sink
+Oct 20 16:29:28 MyLinuxVM kernel: rfkill: input handler enabled
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Created slice session.slice - User Core Session Slice.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting dbus-broker.service - D-Bus User Message Bus...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started dbus-broker.service - D-Bus User Message Bus.
+Oct 20 16:29:28 MyLinuxVM dbus-broker-launch[2553]: Policy to allow eavesdropping in /usr/share/dbus-1/session.conf +31: Eavesdropping is deprecated and ignored
+Oct 20 16:29:28 MyLinuxVM dbus-broker-launch[2553]: Policy to allow eavesdropping in /usr/share/dbus-1/session.conf +33: Eavesdropping is deprecated and ignored
+Oct 20 16:29:28 MyLinuxVM dbus-broker-launch[2553]: Ready
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Created slice app-gnome\x2dsession\x2dmanager.slice - Slice /app/gnome-session-manager.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target gnome-session-wayland.target - GNOME Wayland Session.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target org.gnome.Shell.target - GNOME Shell.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting gnome-session-monitor.service - Monitor Session leader for GNOME Session...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting xdg-user-dirs.service - User folders update...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Finished xdg-user-dirs.service - User folders update.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target graphical-session-pre.target - Session services which should run early before the graphical session is brought up.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started gnome-session-monitor.service - Monitor Session leader for GNOME Session.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target gnome-session-pre.target - Tasks to be run before GNOME Session starts.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting gnome-session-manager@gnome.service - GNOME Session Manager (session: gnome)...
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-daemon[2633]: discover_other_daemon: 1
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started app-gnome-gnome\x2dkeyring\x2dpkcs11-2627.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-pkcs11.desktop[2633]: discover_other_daemon: 1
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started app-gnome-gnome\x2dkeyring\x2dsecrets-2637.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started app-gnome-gnome\x2dkeyring\x2dssh-2632.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-daemon[2638]: discover_other_daemon: 1
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-ssh.desktop[2638]: discover_other_daemon: 1SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-daemon[2641]: discover_other_daemon: 1
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-secrets.desktop[2641]: discover_other_daemon: 1SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started gnome-session-manager@gnome.service - GNOME Session Manager (session: gnome).
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target gnome-session-manager.target - GNOME Session Manager is ready.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting org.gnome.Shell@wayland.service - GNOME Shell on Wayland...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: org.gnome.Shell@x11.service - GNOME Shell on X11 was skipped because of an unmet condition check (ConditionEnvironment=XDG_SESSION_TYPE=x11).
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: app-gnome-xdg\x2duser\x2ddirs-2645.scope: PID 2645 vanished before we could move it to target cgroup '/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome-xdg\x2duser\x2ddirs-2645.scope', skipping: No such process
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: app-gnome-xdg\x2duser\x2ddirs-2645.scope: No PIDs left to attach to the scope's control group, refusing.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: app-gnome-xdg\x2duser\x2ddirs-2645.scope: Failed with result 'resources'.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Failed to start app-gnome-xdg\x2duser\x2ddirs-2645.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting gvfs-daemon.service - Virtual filesystem service...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started gvfs-daemon.service - Virtual filesystem service.
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Running GNOME Shell (using mutter 47.5) as a Wayland display server
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:28 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 2673 of process 2646 (/usr/bin/gnome-shell) owned by '1000' high priority at nice level -15.
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Thread 'KMS thread' will be using high priority scheduling
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: libEGL warning: egl: failed to create dri2 screen
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: libEGL warning: egl: failed to create dri2 screen
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: libEGL warning: egl: failed to create dri2 screen
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Added device '/dev/dri/card0' (vmwgfx) using atomic mode setting.
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Failed to initialize accelerated iGPU/dGPU framebuffer sharing: Not hardware accelerated
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Created gbm renderer for '/dev/dri/card0'
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Boot VGA GPU /dev/dri/card0 selected as primary
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Starting at-spi-dbus-bus.service - Accessibility services bus...
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Started at-spi-dbus-bus.service - Accessibility services bus.
+Oct 20 16:29:29 MyLinuxVM dbus-broker-launch[2692]: Ready
+Oct 20 16:29:29 MyLinuxVM gnome-shell[2646]: Using public X11 display :0, (using :1 for managed services)
+Oct 20 16:29:29 MyLinuxVM gnome-shell[2646]: Using Wayland display name 'wayland-0'
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.18\x2dorg.a11y.atspi.Registry.slice - Slice /app/dbus-:1.18-org.a11y.atspi.Registry.
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Started dbus-:1.18-org.a11y.atspi.Registry@0.service.
+Oct 20 16:29:29 MyLinuxVM at-spi2-registryd[2694]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Oct 20 16:29:29 MyLinuxVM gnome-shell[2646]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+Oct 20 16:29:29 MyLinuxVM gnome-shell[2646]: Will monitor session 2
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Shell.Screencast.slice - Slice /app/dbus-:1.2-org.gnome.Shell.Screencast.
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Shell.Screencast@0.service.
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Starting xdg-permission-store.service - sandboxed app permission store...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Shell.CalendarServer.slice - Slice /app/dbus-:1.2-org.gnome.Shell.CalendarServer.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Shell.CalendarServer@0.service.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Started xdg-permission-store.service - sandboxed app permission store.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting evolution-source-registry.service - Evolution source registry...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Shell.Notifications.slice - Slice /app/dbus-:1.2-org.gnome.Shell.Notifications.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Shell.Notifications@0.service.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Started org.gnome.Shell@wayland.service - GNOME Shell on Wayland.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Reached target gnome-session-initialized.target - GNOME Session is initialized.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: gnome-session-x11-services.target - GNOME session X11 services is inactive.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Dependency failed for org.gnome.SettingsDaemon.XSettings.service - GNOME XSettings service.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: org.gnome.SettingsDaemon.XSettings.service: Job org.gnome.SettingsDaemon.XSettings.service/start failed with result 'dependency'.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: gnome-session-x11-services-ready.target: Job gnome-session-x11-services-ready.target/verify-active failed with result 'dependency'.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Reached target gnome-session@gnome.target - GNOME Session (session: gnome).
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.XSettings.target - GNOME XSettings target.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting gnome-session-signal-init.service - Signal initialization done to GNOME Session Manager...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.freedesktop.IBus.session.GNOME.service - IBus Daemon for GNOME...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.A11ySettings.service - GNOME accessibility service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Color.service - GNOME color management service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Datetime.service - GNOME date & time service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Housekeeping.service - GNOME maintenance of expirable data service...
+Oct 20 16:29:30 MyLinuxVM gnome-shell[2646]: Error looking up permission: GDBus.Error:org.freedesktop.portal.Error.NotFound: No entry for geolocation
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Keyboard.service - GNOME keyboard configuration service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.MediaKeys.service - GNOME keyboard shortcuts service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Power.service - GNOME power management service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.PrintNotifications.service - GNOME printer notifications service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Rfkill.service - GNOME RFKill support service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.ScreensaverProxy.service - GNOME FreeDesktop screensaver service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Sharing.service - GNOME file sharing service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Smartcard.service - GNOME smartcard service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Sound.service - GNOME sound sample caching service...
+Oct 20 16:29:30 MyLinuxVM spice-vdagent[2774]: vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0 does not exist, exiting
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.UsbProtection.service - GNOME USB protection service...
+Oct 20 16:29:30 MyLinuxVM vmware-user.desktop[2793]: vmware-user: could not open /proc/fs/vmblock/dev
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Wacom.service - GNOME Wacom tablet support service...
+Oct 20 16:29:30 MyLinuxVM gnome-session-binary[2620]: Entering running state
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Finished gnome-session-signal-init.service - Signal initialization done to GNOME Session Manager.
+Oct 20 16:29:30 MyLinuxVM gnome-session[2620]: gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2774: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2774: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session[2620]: gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2781: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2781: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session[2620]: gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2787: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2787: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM kernel: rfkill: input handler disabled
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.ScreensaverProxy.service - GNOME FreeDesktop screensaver service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Rfkill.service - GNOME RFKill support service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.UsbProtection.service - GNOME USB protection service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Sharing.service - GNOME file sharing service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Housekeeping.service - GNOME maintenance of expirable data service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Datetime.service - GNOME date & time service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Sound.service - GNOME sound sample caching service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.freedesktop.IBus.session.GNOME.service - IBus Daemon for GNOME.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-libcanberra\x2dlogin\x2dsound-2799.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-org.gnome.Evolution\x2dalarm\x2dnotify-2785.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-org.gnome.SettingsDaemon.DiskUtilityNotify-2790.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-org.gnome.Software-2809.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-vboxclient-2795.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.OnlineAccounts.slice - Slice /app/dbus-:1.2-org.gnome.OnlineAccounts.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.ScreenSaver.slice - Slice /app/dbus-:1.2-org.gnome.ScreenSaver.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Datetime.target - GNOME date & time target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Housekeeping.target - GNOME maintenance of expirable data target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Rfkill.target - GNOME RFKill support target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.ScreensaverProxy.target - GNOME FreeDesktop screensaver target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Sharing.target - GNOME file sharing target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Sound.target - GNOME sound sample caching target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.UsbProtection.target - GNOME USB protection target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.OnlineAccounts@0.service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.ScreenSaver@0.service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting gvfs-udisks2-volume-monitor.service - Virtual filesystem service - disk device monitor...
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started evolution-source-registry.service - Evolution source registry.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.A11ySettings.service - GNOME accessibility service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.freedesktop.portal.IBus.slice - Slice /app/dbus-:1.2-org.freedesktop.portal.IBus.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.A11ySettings.target - GNOME accessibility target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.freedesktop.portal.IBus@0.service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Smartcard.service - GNOME smartcard service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Smartcard.target - GNOME smartcard target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started gvfs-udisks2-volume-monitor.service - Virtual filesystem service - disk device monitor.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting gvfs-mtp-volume-monitor.service - Virtual filesystem service - Media Transfer Protocol monitor...
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started gvfs-mtp-volume-monitor.service - Virtual filesystem service - Media Transfer Protocol monitor.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting evolution-calendar-factory.service - Evolution calendar service...
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting gvfs-gphoto2-volume-monitor.service - Virtual filesystem service - digital camera monitor...
+Oct 20 16:29:31 MyLinuxVM goa-daemon[2926]: goa-daemon version 3.52.8 starting
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started gvfs-gphoto2-volume-monitor.service - Virtual filesystem service - digital camera monitor.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Identity.slice - Slice /app/dbus-:1.2-org.gnome.Identity.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Identity@0.service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting gvfs-goa-volume-monitor.service - Virtual filesystem service - GNOME Online Accounts monitor...
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started gvfs-goa-volume-monitor.service - Virtual filesystem service - GNOME Online Accounts monitor.
+Oct 20 16:29:31 MyLinuxVM systemd[1]: Starting sssd-kcm.service - SSSD Kerberos Cache Manager...
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started evolution-calendar-factory.service - Evolution calendar service.
+Oct 20 16:29:32 MyLinuxVM cupsd[1396]: REQUEST localhost - - "POST / HTTP/1.1" 200 368 Create-Printer-Subscriptions successful-ok
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Starting evolution-addressbook-factory.service - Evolution address book service...
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.PrintNotifications.service - GNOME printer notifications service.
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.PrintNotifications.target - GNOME printer notifications target.
+Oct 20 16:29:32 MyLinuxVM gsd-usb-protect[2779]: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started evolution-addressbook-factory.service - Evolution address book service.
+Oct 20 16:29:32 MyLinuxVM systemd[1]: Started sssd-kcm.service - SSSD Kerberos Cache Manager.
+Oct 20 16:29:32 MyLinuxVM sssd_kcm[3082]: Starting up
+Oct 20 16:29:32 MyLinuxVM goa-identity-se[3022]: GoaKerberosIdentityManager: Using polling for change notification for credential cache type 'KCM'
+Oct 20 16:29:32 MyLinuxVM gnome-shell[3036]: Xwayland glamor: GBM Wayland interfaces not available
+Oct 20 16:29:32 MyLinuxVM gnome-shell[3036]: Failed to initialize glamor, falling back to sw
+Oct 20 16:29:32 MyLinuxVM kernel: ISO 9660 Extensions: Microsoft Joliet Level 3
+Oct 20 16:29:32 MyLinuxVM kernel: ISO 9660 Extensions: RRIP_1991A
+Oct 20 16:29:32 MyLinuxVM udisksd[1034]: Mounted /dev/sr0 at /run/media/ajithesh2002/VBox_GAs_7.1.12 on behalf of uid 1000
+Oct 20 16:29:32 MyLinuxVM NetworkManager[1387]: <info>  [1760957972.7713] agent-manager: agent[4cbdd9e109d598bd,:1.81/org.gnome.Shell.NetworkAgent/1000]: agent registered
+Oct 20 16:29:32 MyLinuxVM gnome-shell[3036]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started pipewire.service - PipeWire Multimedia Service.
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started wireplumber.service - Multimedia Service Session Manager.
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started pipewire-pulse.service - PipeWire PulseAudio.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Reached target gnome-session-x11-services.target - GNOME session X11 services.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.XSettings.service - GNOME XSettings service...
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3146 of process 3146 (/usr/bin/pipewire) owned by '1000' high priority at nice level -11.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: > Warning:          Unsupported maximum keycode 708, clipping.
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: >                   X11 cannot support keycodes above 255.
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: > Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3140 of process 3140 (/usr/bin/pipewire) owned by '1000' high priority at nice level -11.
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: > Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: Errors from xkbcomp are not fatal to the X server
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3162 of process 3140 (/usr/bin/pipewire) owned by '1000' RT at priority 20.
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3168 of process 3146 (/usr/bin/pipewire) owned by '1000' RT at priority 20.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Color.service - GNOME color management service.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Color.target - GNOME color management target.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Keyboard.service - GNOME keyboard configuration service.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Keyboard.target - GNOME keyboard configuration target.
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3142 of process 3142 (/usr/bin/wireplumber) owned by '1000' high priority at nice level -11.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.MediaKeys.service - GNOME keyboard shortcuts service.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.MediaKeys.target - GNOME keyboard shortcuts target.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Starting xdg-desktop-portal.service - Portal service...
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.bluez5: BlueZ system service is not available
+Oct 20 16:29:33 MyLinuxVM libcanberra-login-sound.desktop[2799]: Failed to play sound: File or data not found
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3174 of process 3142 (/usr/bin/wireplumber) owned by '1000' RT at priority 20.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: [0:00:35.467266809] [3142]  INFO Camera camera_manager.cpp:325 libcamera v0.3.2
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Wacom.service - GNOME Wacom tablet support service.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Wacom.target - GNOME Wacom tablet support target.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Starting xdg-document-portal.service - flatpak document portal service...
+Oct 20 16:29:34 MyLinuxVM gsd-xsettings[3187]: Failed to get current UI scaling factor: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Destination does not exist
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Started xdg-document-portal.service - flatpak document portal service.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.XSettings.service - GNOME XSettings service.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target gnome-session-x11-services-ready.target - GNOME session X11 services.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Power.service - GNOME power management service.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Power.target - GNOME power management target.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target gnome-session.target - GNOME Session.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target gnome-session-wayland@gnome.target - GNOME Wayland Session (session: gnome).
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target graphical-session.target - Current graphical user session.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: gnome-initial-setup-first-login.service - GNOME Initial Setup was skipped because of an unmet condition check (ConditionPathExists=!/home/ajithesh2002/.config/gnome-initial-setup-done).
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Starting xdg-desktop-portal-gnome.service - Portal service (GNOME implementation)...
+Oct 20 16:29:34 MyLinuxVM gsd-media-keys[2755]: Failed to grab accelerator for keybinding settings:hibernate
+Oct 20 16:29:34 MyLinuxVM gsd-media-keys[2755]: Failed to grab accelerator for keybinding settings:playback-repeat
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476304 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476308 main     Log opened 2025-10-20T10:59:34.475672000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476789 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476842 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476977 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477008 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477009 main     Process ID: 3301
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477009 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477066 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477198 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477614 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.483346 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.483593 main      Service: Shared Clipboard
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.497820 main      Daemonizing service ...
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.504431 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.504434 main     Log opened 2025-10-20T10:59:34.504422000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505340 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505440 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505548 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505554 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505554 main     Process ID: 3306
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505555 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505564 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505678 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505991 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.507848 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.507993 main      Service: Seamless Mode Support
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.508115 main      Daemonizing service ...
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.534558 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.534560 main     Log opened 2025-10-20T10:59:34.534553000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535229 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535362 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535395 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535424 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535425 main     Process ID: 3313
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535425 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535529 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535737 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.536340 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.537814 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.537878 main      Service: Drag'n'Drop
+Oct 20 16:29:34 MyLinuxVM kernel: traps: VBoxClient[3311] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.539301 main      Daemonizing service ...
+Oct 20 16:29:34 MyLinuxVM systemd-coredump[3317]: Process 3307 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:34 MyLinuxVM systemd[1]: Created slice system-systemd\x2dcoredump.slice - Slice /system/systemd-coredump.
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.564769 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.564772 main     Log opened 2025-10-20T10:59:34.564761000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565536 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565620 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565652 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565694 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565695 main     Process ID: 3320
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565695 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565753 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565910 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.567910 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM systemd[1]: Started systemd-coredump@0-3317-0.service - Process Core Dump (PID 3317/UID 0).
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.615119 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.615175 main      Service: VirtualBox host version check
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.615402 main      Daemonizing service ...
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639107 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639110 main     Log opened 2025-10-20T10:59:34.639102000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639142 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639145 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639149 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639153 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639154 main     Process ID: 3328
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639154 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639159 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639255 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.641540 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.644635 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.644674 main      Service: VMSVGA display assistant
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.645389 main      Daemonizing service ...
+Oct 20 16:29:35 MyLinuxVM systemd-coredump[3321]: Process 3307 (VBoxClient) of user 1000 dumped core.
+                                                  
+                                                  Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.
+                                                  Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64
+                                                  Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64
+                                                  Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64
+                                                  Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64
+                                                  Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64
+                                                  Stack trace of thread 3311:
+                                                  #0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)
+                                                  #1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)
+                                                  #2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3310:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000416559 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x16559)
+                                                  #4  0x000000000041838a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1838a)
+                                                  #5  0x0000000000417d6a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x17d6a)
+                                                  #6  0x0000000000404860 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x4860)
+                                                  #7  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #8  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #9  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #10 0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3307:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)
+                                                  #4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)
+                                                  #5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)
+                                                  #6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)
+                                                  ELF object binary architecture: AMD x86-64
+Oct 20 16:29:35 MyLinuxVM systemd[1]: systemd-coredump@0-3317-0.service: Deactivated successfully.
+Oct 20 16:29:35 MyLinuxVM gnome-shell[2646]: GNOME Shell started at Mon Oct 20 2025 16:29:30 GMT+0530 (India Standard Time)
+Oct 20 16:29:35 MyLinuxVM gnome-shell[2646]: Registering session with GDM
+Oct 20 16:29:35 MyLinuxVM cupsd[1396]: REQUEST localhost - - "POST / HTTP/1.1" 200 151 Cancel-Subscription successful-ok
+Oct 20 16:29:35 MyLinuxVM gdm-launch-environment][1441]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Oct 20 16:29:36 MyLinuxVM systemd[1]: run-user-42-doc.mount: Deactivated successfully.
+Oct 20 16:29:36 MyLinuxVM systemd-logind[1030]: Session c1 logged out. Waiting for processes to exit.
+Oct 20 16:29:36 MyLinuxVM systemd[2515]: Started xdg-desktop-portal-gnome.service - Portal service (GNOME implementation).
+Oct 20 16:29:36 MyLinuxVM systemd[1]: session-c1.scope: Deactivated successfully.
+Oct 20 16:29:36 MyLinuxVM systemd[1]: session-c1.scope: Consumed 6.276s CPU time, 414.6M memory peak.
+Oct 20 16:29:36 MyLinuxVM systemd-logind[1030]: Removed session c1.
+Oct 20 16:29:36 MyLinuxVM systemd[2515]: Starting xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation)...
+Oct 20 16:29:36 MyLinuxVM systemd[2515]: Started xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation).
+Oct 20 16:29:36 MyLinuxVM systemd[2515]: Started xdg-desktop-portal.service - Portal service.
+Oct 20 16:29:36 MyLinuxVM mutter-x11-fram[3303]: Using GtkSettings:gtk-application-prefer-dark-theme with libadwaita is unsupported. Please use AdwStyleManager:color-scheme instead.
+Oct 20 16:29:36 MyLinuxVM systemd[1]: Starting fwupd.service - Firmware update daemon...
+Oct 20 16:29:36 MyLinuxVM fwupd[3414]: 10:59:36.865 FuMain               fwupd 1.9.31 ready for requests (locale en_IN.UTF-8)
+Oct 20 16:29:36 MyLinuxVM systemd[1]: Started fwupd.service - Firmware update daemon.
+Oct 20 16:29:37 MyLinuxVM PackageKit[2016]: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Oct 20 16:29:37 MyLinuxVM PackageKit[2016]: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Oct 20 16:29:37 MyLinuxVM PackageKit[2016]: refresh-cache transaction /145_bcceaaba from uid 1000 finished with success after 31ms
+Oct 20 16:29:37 MyLinuxVM gnome-software[2809]: Only 0 apps for curated list, hiding
+Oct 20 16:29:37 MyLinuxVM gnome-software[2809]: Only 1 apps for recent list, hiding
+Oct 20 16:29:38 MyLinuxVM PackageKit[2016]: resolve transaction /146_cebebaac from uid 1000 finished with success after 1398ms
+Oct 20 16:29:38 MyLinuxVM PackageKit[2016]: resolve transaction /147_cbdbdeca from uid 1000 finished with success after 6ms
+Oct 20 16:29:38 MyLinuxVM PackageKit[2016]: resolve transaction /148_ecceeaae from uid 1000 finished with success after 6ms
+Oct 20 16:29:38 MyLinuxVM PackageKit[2016]: resolve transaction /149_eeceacba from uid 1000 finished with success after 5ms
+Oct 20 16:29:38 MyLinuxVM PackageKit[2016]: resolve transaction /150_dcecccaa from uid 1000 finished with success after 5ms
+Oct 20 16:29:39 MyLinuxVM PackageKit[2016]: get-updates transaction /151_bbddbccb from uid 1000 finished with success after 947ms
+Oct 20 16:29:40 MyLinuxVM PackageKit[2016]: get-updates transaction /152_cbbcaabe from uid 1000 finished with success after 149ms
+Oct 20 16:29:40 MyLinuxVM PackageKit[2016]: resolve transaction /153_daaeecba from uid 1000 finished with success after 22ms
+Oct 20 16:29:40 MyLinuxVM kernel: traps: VBoxClient[3452] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:40 MyLinuxVM systemd-coredump[3453]: Process 3449 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:40 MyLinuxVM systemd[1]: Started systemd-coredump@1-3453-0.service - Process Core Dump (PID 3453/UID 0).
+Oct 20 16:29:40 MyLinuxVM gnome-shell[2646]: Received error from D-Bus search provider firefox.desktop: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Calculator.SearchProvider.slice - Slice /app/dbus-:1.2-org.gnome.Calculator.SearchProvider.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Characters.slice - Slice /app/dbus-:1.2-org.gnome.Characters.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Nautilus.slice - Slice /app/dbus-:1.2-org.gnome.Nautilus.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Settings.SearchProvider.slice - Slice /app/dbus-:1.2-org.gnome.Settings.SearchProvider.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.clocks.slice - Slice /app/dbus-:1.2-org.gnome.clocks.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Calculator.SearchProvider@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Characters@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Nautilus@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Settings.SearchProvider@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.clocks@0.service.
+Oct 20 16:29:40 MyLinuxVM PackageKit[2016]: resolve transaction /154_cbaaeecc from uid 1000 finished with success after 4ms
+Oct 20 16:29:40 MyLinuxVM systemd-coredump[3454]: Process 3449 (VBoxClient) of user 1000 dumped core.
+                                                  
+                                                  Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.
+                                                  Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64
+                                                  Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64
+                                                  Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64
+                                                  Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64
+                                                  Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64
+                                                  Stack trace of thread 3452:
+                                                  #0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)
+                                                  #1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)
+                                                  #2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3449:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)
+                                                  #4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)
+                                                  #5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)
+                                                  #6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)
+                                                  ELF object binary architecture: AMD x86-64
+Oct 20 16:29:40 MyLinuxVM systemd[1]: systemd-coredump@1-3453-0.service: Deactivated successfully.
+Oct 20 16:29:40 MyLinuxVM PackageKit[2016]: resolve transaction /155_abccddce from uid 1000 finished with success after 10ms
+Oct 20 16:29:40 MyLinuxVM nautilus[3461]: Connecting to org.freedesktop.Tracker3.Miner.Files
+Oct 20 16:29:40 MyLinuxVM gnome-shell[2646]: Received error from D-Bus search provider firefox.desktop: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 20 16:29:40 MyLinuxVM PackageKit[2016]: resolve transaction /156_edeaeded from uid 1000 finished with success after 3ms
+Oct 20 16:29:40 MyLinuxVM PackageKit[2016]: resolve transaction /157_cceecccc from uid 1000 finished with success after 3ms
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Created slice background.slice - User Background Tasks Slice.
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Starting tracker-miner-fs-3.service - Tracker file system data miner...
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Starting dconf.service - User preferences database...
+Oct 20 16:29:41 MyLinuxVM gnome-character[3460]: JS LOG: Characters Application started
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Started dconf.service - User preferences database.
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Started tracker-miner-fs-3.service - Tracker file system data miner.
+Oct 20 16:29:42 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Ptyxis.slice - Slice /app/dbus-:1.2-org.gnome.Ptyxis.
+Oct 20 16:29:42 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Ptyxis@0.service.
+Oct 20 16:29:42 MyLinuxVM kernel: evm: overlay not supported
+Oct 20 16:29:42 MyLinuxVM podman[3571]: 2025-10-20 16:29:42.753249012 +0530 IST m=+0.131674745 system refresh
+Oct 20 16:29:42 MyLinuxVM PackageKit[2016]: get-updates transaction /158_ebdaeaae from uid 1000 finished with success after 269ms
+Oct 20 16:29:42 MyLinuxVM systemd[2515]: Created slice user.slice - Slice /user.
+Oct 20 16:29:42 MyLinuxVM systemd[2515]: Started podman-pause-f7af02aa.scope.
+Oct 20 16:29:43 MyLinuxVM PackageKit[2016]: get-updates transaction /159_cbadcbce from uid 1000 finished with success after 234ms
+Oct 20 16:29:43 MyLinuxVM systemd[2515]: Started ptyxis-spawn-04e2f92c-2925-4ffd-882d-a4b39df19e72.scope - [systemd-run] /usr/bin/bash.
+Oct 20 16:29:43 MyLinuxVM gnome-shell[2646]: Invalid sequence for VSYNC frame info
+Oct 20 16:29:45 MyLinuxVM systemd[1]: fprintd.service: Deactivated successfully.
+Oct 20 16:29:45 MyLinuxVM kernel: traps: VBoxClient[3642] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:45 MyLinuxVM systemd-coredump[3643]: Process 3639 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:45 MyLinuxVM systemd[1]: Started systemd-coredump@2-3643-0.service - Process Core Dump (PID 3643/UID 0).
+Oct 20 16:29:45 MyLinuxVM systemd-coredump[3644]: Process 3639 (VBoxClient) of user 1000 dumped core.
+                                                  
+                                                  Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.
+                                                  Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64
+                                                  Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64
+                                                  Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64
+                                                  Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64
+                                                  Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64
+                                                  Stack trace of thread 3642:
+                                                  #0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)
+                                                  #1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)
+                                                  #2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3639:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)
+                                                  #4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)
+                                                  #5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)
+                                                  #6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)
+                                                  ELF object binary architecture: AMD x86-64
+Oct 20 16:29:45 MyLinuxVM systemd[1]: systemd-coredump@2-3643-0.service: Deactivated successfully.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Stopping user@42.service - User Manager for UID 42...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Activating special unit exit.target...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target default.target - Main User Target.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopping pipewire-pulse.service - PipeWire PulseAudio...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped pipewire-pulse.service - PipeWire PulseAudio.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopping wireplumber.service - Multimedia Service Session Manager...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped wireplumber.service - Multimedia Service Session Manager.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopping pipewire.service - PipeWire Multimedia Service...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped pipewire.service - PipeWire Multimedia Service.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target basic.target - Basic System.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target paths.target - Paths.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target sockets.target - Sockets.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target timers.target - Timers.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped systemd-tmpfiles-clean.timer - Daily Cleanup of User's Temporary Directories.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Closed pipewire-pulse.socket - PipeWire PulseAudio.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Closed pipewire.socket - PipeWire Multimedia System Sockets.
+Oct 20 16:29:46 MyLinuxVM dbus-broker[1720]: Dispatched 356 messages @ 5(±37)μs / message.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopping dbus-broker.service - D-Bus User Message Bus...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped systemd-tmpfiles-setup.service - Create User Files and Directories.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped dbus-broker.service - D-Bus User Message Bus.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Removed slice session.slice - User Core Session Slice.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Closed dbus.socket - D-Bus User Message Bus Socket.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Removed slice app.slice - User Application Slice.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Reached target shutdown.target - Shutdown.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Finished systemd-exit.service - Exit the Session.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Reached target exit.target - Exit the Session.
+Oct 20 16:29:46 MyLinuxVM systemd-logind[1030]: Removed session 1.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: user@42.service: Deactivated successfully.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Stopped user@42.service - User Manager for UID 42.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Stopping user-runtime-dir@42.service - User Runtime Directory /run/user/42...
+Oct 20 16:29:46 MyLinuxVM systemd[1]: run-user-42.mount: Deactivated successfully.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: user-runtime-dir@42.service: Deactivated successfully.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Stopped user-runtime-dir@42.service - User Runtime Directory /run/user/42.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Removed slice user-42.slice - User Slice of UID 42.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: user-42.slice: Consumed 6.948s CPU time, 442.3M memory peak.
+Oct 20 16:29:50 MyLinuxVM kernel: traps: VBoxClient[3670] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:50 MyLinuxVM systemd-coredump[3671]: Process 3667 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:50 MyLinuxVM systemd[1]: Started systemd-coredump@3-3671-0.service - Process Core Dump (PID 3671/UID 0).
+Oct 20 16:29:51 MyLinuxVM systemd-coredump[3672]: Process 3667 (VBoxClient) of user 1000 dumped core.
+                                                  
+                                                  Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.
+                                                  Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64
+                                                  Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64
+                                                  Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64
+                                                  Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64
+                                                  Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64
+                                                  Stack trace of thread 3670:
+                                                  #0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)
+                                                  #1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)
+                                                  #2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3667:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)
+                                                  #4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)
+                                                  #5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)
+                                                  #6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)
+                                                  ELF object binary architecture: AMD x86-64
+Oct 20 16:29:51 MyLinuxVM systemd[1]: systemd-coredump@3-3671-0.service: Deactivated successfully.
+Oct 20 16:29:51 MyLinuxVM gnome-character[3460]: JS LOG: Characters Application exiting
+Oct 20 16:29:51 MyLinuxVM systemd[2515]: dbus-:1.2-org.gnome.Characters@0.service: Consumed 788ms CPU time, 108.3M memory peak.
+Oct 20 16:29:56 MyLinuxVM kernel: traps: VBoxClient[3687] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:56 MyLinuxVM systemd-coredump[3688]: Process 3684 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:56 MyLinuxVM systemd[1]: Started systemd-coredump@4-3688-0.service - Process Core Dump (PID 3688/UID 0).
+Oct 20 16:29:56 MyLinuxVM systemd-coredump[3689]: Process 3684 (VBoxClient) of user 1000 dumped core.
+                                                  
+                                                  Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.
+                                                  Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64
+                                                  Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64
+                                                  Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64
+                                                  Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64
+                                                  Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64
+                                                  Stack trace of thread 3687:
+                                                  #0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)
+                                                  #1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)
+                                                  #2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3684:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)
+                                                  #4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)
+                                                  #5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)
+                                                  #6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)
+                                                  ELF object binary architecture: AMD x86-64
+Oct 20 16:29:56 MyLinuxVM systemd[1]: systemd-coredump@4-3688-0.service: Deactivated successfully.
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Starting logrotate.service - Rotate log files...
+Oct 20 16:30:01 MyLinuxVM kernel: traps: VBoxClient[3699] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Starting fprintd.service - Fingerprint Authentication Daemon...
+Oct 20 16:30:01 MyLinuxVM systemd-coredump[3700]: Process 3696 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Started systemd-coredump@5-3700-0.service - Process Core Dump (PID 3700/UID 0).
+Oct 20 16:30:01 MyLinuxVM systemd[1]: logrotate.service: Deactivated successfully.
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Finished logrotate.service - Rotate log files.
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Started fprintd.service - Fingerprint Authentication Daemon.
+Oct 20 16:30:01 MyLinuxVM systemd-coredump[3702]: Process 3696 (VBoxClient) of user 1000 dumped core.
+                                                  
+                                                  Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.
+                                                  Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64
+                                                  Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64
+                                                  Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64
+                                                  Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64
+                                                  Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64
+                                                  Stack trace of thread 3699:
+                                                  #0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)
+                                                  #1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)
+                                                  #2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3698:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000416559 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x16559)
+                                                  #4  0x000000000041838a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1838a)
+                                                  #5  0x0000000000417d6a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x17d6a)
+                                                  #6  0x0000000000404860 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x4860)
+                                                  #7  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #8  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #9  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #10 0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3696:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)
+                                                  #4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)
+                                                  #5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)
+                                                  #6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)
+                                                  ELF object binary architecture: AMD x86-64
+Oct 20 16:30:01 MyLinuxVM systemd[1]: systemd-coredump@5-3700-0.service: Deactivated successfully.
+Oct 20 16:30:03 MyLinuxVM systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 20 16:30:03 MyLinuxVM systemd[1]: systemd-localed.service: Deactivated successfully.
+Oct 20 16:30:05 MyLinuxVM sudo[3694]: ajithesh2002 : TTY=pts/0 ; PWD=/home/ajithesh2002 ; USER=root ; COMMAND=/home/ajithesh2002/diagnostics.py -o /home/ajithesh2002/diagnostics_report.txt
+Oct 20 16:30:05 MyLinuxVM systemd-logind[1030]: Existing logind session ID 3 used by new audit session, ignoring.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Created slice user-0.slice - User Slice of UID 0.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Starting user-runtime-dir@0.service - User Runtime Directory /run/user/0...
+Oct 20 16:30:05 MyLinuxVM systemd-logind[1030]: New session c2 of user root.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Finished user-runtime-dir@0.service - User Runtime Directory /run/user/0.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Starting user@0.service - User Manager for UID 0...
+Oct 20 16:30:05 MyLinuxVM systemd-logind[1030]: New session 4 of user root.
+Oct 20 16:30:05 MyLinuxVM (systemd)[3734]: pam_unix(systemd-user:session): session opened for user root(uid=0) by root(uid=0)
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Queued start job for default target default.target.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Created slice app.slice - User Application Slice.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: grub-boot-success.timer - Mark boot as successful after the user session has run 2 minutes was skipped because of an unmet condition check (ConditionUser=!@system).
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of User's Temporary Directories.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target paths.target - Paths.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target timers.target - Timers.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: pipewire-pulse.socket - PipeWire PulseAudio was skipped because of an unmet condition check (ConditionUser=!root).
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: pipewire.socket - PipeWire Multimedia System Sockets was skipped because of an unmet condition check (ConditionUser=!root).
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Starting systemd-tmpfiles-setup.service - Create User Files and Directories...
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Finished systemd-tmpfiles-setup.service - Create User Files and Directories.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target sockets.target - Sockets.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target basic.target - Basic System.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: gnome-initial-setup-copy-worker.service - GNOME Initial Setup Copy Worker was skipped because of an unmet condition check (ConditionUser=!@system).
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target default.target - Main User Target.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Startup finished in 325ms.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Started user@0.service - User Manager for UID 0.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Started session-c2.scope - Session c2 of User root.
+Oct 20 16:30:06 MyLinuxVM sudo[3694]: pam_unix(sudo:session): session opened for user root(uid=0) by ajithesh2002(uid=1000)
+Oct 20 16:30:06 MyLinuxVM systemd[1]: Starting systemd-hostnamed.service - Hostname Service...
+Oct 20 16:30:06 MyLinuxVM systemd[1]: Started systemd-hostnamed.service - Hostname Service.
+Oct 20 16:30:06 MyLinuxVM kernel: traps: VBoxClient[3776] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:30:06 MyLinuxVM systemd-coredump[3777]: Process 3773 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:30:06 MyLinuxVM systemd[1]: Started systemd-coredump@6-3777-0.service - Process Core Dump (PID 3777/UID 0).
+Oct 20 16:30:06 MyLinuxVM systemd-coredump[3778]: Process 3773 (VBoxClient) of user 1000 dumped core.
+                                                  
+                                                  Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.
+                                                  Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64
+                                                  Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64
+                                                  Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64
+                                                  Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64
+                                                  Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64
+                                                  Stack trace of thread 3776:
+                                                  #0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)
+                                                  #1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)
+                                                  #2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3774:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x0000000000434c30 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x34c30)
+                                                  #2  0x0000000000450bfb n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50bfb)
+                                                  #3  0x000000000043566a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x3566a)
+                                                  #4  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #5  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #6  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #7  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3775:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000416559 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x16559)
+                                                  #4  0x000000000041838a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1838a)
+                                                  #5  0x0000000000417d6a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x17d6a)
+                                                  #6  0x0000000000404860 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x4860)
+                                                  #7  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)
+                                                  #8  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)
+                                                  #9  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)
+                                                  #10 0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)
+                                                  
+                                                  Stack trace of thread 3773:
+                                                  #0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)
+                                                  #1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)
+                                                  #2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)
+                                                  #3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)
+                                                  #4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)
+                                                  #5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)
+                                                  #6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)
+                                                  ELF object binary architecture: AMD x86-64
+Oct 20 16:30:06 MyLinuxVM systemd[1]: systemd-coredump@6-3777-0.service: Deactivated successfully.
+Oct 20 16:30:06 MyLinuxVM sudo[3781]:     root : TTY=pts/1 ; PWD=/home/ajithesh2002 ; USER=root ; COMMAND=/sbin/iptables -L -n
+Oct 20 16:30:06 MyLinuxVM sudo[3781]: pam_unix(sudo:session): session opened for user root(uid=0) by ajithesh2002(uid=0)
+Oct 20 16:30:06 MyLinuxVM sudo[3781]: pam_unix(sudo:session): session closed for user root
+
+=== Package & Updates ===
+
+rpm kernel packages:
+kernel-tools-libs-6.12.0-140.el10.x86_64
+kernel-tools-6.12.0-140.el10.x86_64
+kernel-srpm-macros-1.0-25.el10.noarch
+kernel-modules-extra-matched-6.12.0-140.el10.x86_64
+kernel-modules-extra-6.12.0-140.el10.x86_64
+kernel-modules-extra-6.12.0-105.el10.x86_64
+kernel-modules-core-6.12.0-140.el10.x86_64
+kernel-modules-core-6.12.0-105.el10.x86_64
+kernel-modules-6.12.0-140.el10.x86_64
+kernel-modules-6.12.0-105.el10.x86_64
+
+
+last yum updates (if yum history exists):
+ID     | Command line                                                                                                                                                                           | Date and time    | Action(s)      | Altered
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     7 | update -y                                                                                                                                                                              | 2025-10-19 18:20 | I, U           |    3   
+     6 | install -y kernel-devel kernel-headers gcc make perl elfutils-libelf-devel                                                                                                             | 2025-10-19 18:19 | Install        |  189   
+     5 | install -y dkms                                                                                                                                                                        | 2025-10-19 18:17 | Install        |   18 E<
+     4 | install epel-release -y                                                                                                                                                                | 2025-10-19 18:13 | Install        |    1 ><
+     3 | update                                                                                                                                                                                 | 2025-10-19 18:01 | I, O, U        |  318 ><
+     2 |                                                                                                                                                                                        | 2025-10-19 17:31 | Install        |    1 > 
+     1 |                                                                                                                                                                                        | 2025-07-20 16:24 | Install        | 1254 EE
+
+
+Installed packages count:
+1464
+
+=== Log Keyword Scan ===
+
+Scanning log: /var/log/messages
+
+Last 500 lines:
+
+Oct 20 16:29:14 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Successfully activated service 'org.gnome.Shell.Screencast'
+Oct 20 16:29:15 MyLinuxVM gnome-session-binary[1738]: Entering running state
+Oct 20 16:29:15 MyLinuxVM gnome-shell[1792]: Registering session with GDM
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Starting realmd.service - Realm and Domain Configuration...
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Received SIGRTMIN+21 from PID 547 (plymouthd).
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Activating service name='org.gnome.ScreenSaver' requested by ':1.24' (uid=42 pid=2116 comm="/usr/libexec/gsd-power" label="system_u:system_r:xdm_t:s0-s0:c0.c1023")
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Finished plymouth-quit-wait.service - Hold until boot process finishes up.
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Reached target multi-user.target - Multi-User System.
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Reached target graphical.target - Graphical Interface.
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Starting systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP...
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Started realmd.service - Realm and Domain Configuration.
+Oct 20 16:29:15 MyLinuxVM systemd[1]: systemd-update-utmp-runlevel.service: Deactivated successfully.
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Finished systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP.
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Startup finished in 1.669s (kernel) + 4.291s (initrd) + 10.693s (userspace) = 16.653s.
+Oct 20 16:29:15 MyLinuxVM gsd-media-keys[2063]: Failed to grab accelerator for keybinding settings:playback-repeat
+Oct 20 16:29:15 MyLinuxVM gsd-media-keys[2063]: Failed to grab accelerator for keybinding settings:hibernate
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Starting fprintd.service - Fingerprint Authentication Daemon...
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Successfully activated service 'org.gnome.ScreenSaver'
+Oct 20 16:29:15 MyLinuxVM systemd[1]: Started fprintd.service - Fingerprint Authentication Daemon.
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Successfully activated service 'org.freedesktop.impl.portal.desktop.gnome'
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.37' (uid=42 pid=2402 comm="/usr/libexec/xdg-desktop-portal" label="system_u:system_r:xdm_t:s0-s0:c0.c1023")
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Activating service name='org.freedesktop.secrets' requested by ':1.37' (uid=42 pid=2402 comm="/usr/libexec/xdg-desktop-portal" label="system_u:system_r:xdm_t:s0-s0:c0.c1023")
+Oct 20 16:29:15 MyLinuxVM gnome-keyring-daemon[2496]: couldn't access control socket: /run/user/42/keyring/control: No such file or directory
+Oct 20 16:29:15 MyLinuxVM gnome-keyring-daemon[2496]: discover_other_daemon: 0
+Oct 20 16:29:15 MyLinuxVM gnome-keyring-d[2496]: couldn't access control socket: /run/user/42/keyring/control: No such file or directory
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[2496]: discover_other_daemon: 0
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Successfully activated service 'org.freedesktop.secrets'
+Oct 20 16:29:15 MyLinuxVM /usr/libexec/gdm-wayland-session[1731]: dbus-daemon[1731]: [session uid=42 pid=1731] Successfully activated service 'org.freedesktop.portal.Desktop'
+Oct 20 16:29:15 MyLinuxVM mutter-x11-fram[2251]: Using GtkSettings:gtk-application-prefer-dark-theme with libadwaita is unsupported. Please use AdwStyleManager:color-scheme instead.
+Oct 20 16:29:15 MyLinuxVM chronyd[1049]: Selected source 192.46.210.39 (2.centos.pool.ntp.org)
+Oct 20 16:29:19 MyLinuxVM systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Oct 20 16:29:25 MyLinuxVM systemd-logind[1030]: New session 2 of user ajithesh2002.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+Oct 20 16:29:25 MyLinuxVM systemd-logind[1030]: New session 3 of user ajithesh2002.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Queued start job for default target default.target.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Created slice app.slice - User Application Slice.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Started grub-boot-success.timer - Mark boot as successful after the user session has run 2 minutes.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of User's Temporary Directories.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target paths.target - Paths.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target timers.target - Timers.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Listening on pipewire-pulse.socket - PipeWire PulseAudio.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Listening on pipewire.socket - PipeWire Multimedia System Sockets.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Starting systemd-tmpfiles-setup.service - Create User Files and Directories...
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target sockets.target - Sockets.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Finished systemd-tmpfiles-setup.service - Create User Files and Directories.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target basic.target - Basic System.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: gnome-initial-setup-copy-worker.service - GNOME Initial Setup Copy Worker was skipped because of an unmet condition check (ConditionPathExists=!/home/ajithesh2002/.config/gnome-initial-setup-done).
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Started user@1000.service - User Manager for UID 1000.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Reached target default.target - Main User Target.
+Oct 20 16:29:25 MyLinuxVM systemd[2515]: Startup finished in 367ms.
+Oct 20 16:29:25 MyLinuxVM systemd[1]: Started session-2.scope - Session 2 of User ajithesh2002.
+Oct 20 16:29:27 MyLinuxVM gsd-media-keys[2063]: Unable to get default source
+Oct 20 16:29:27 MyLinuxVM gsd-media-keys[2063]: Unable to get default sink
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Created slice session.slice - User Core Session Slice.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting dbus-broker.service - D-Bus User Message Bus...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started dbus-broker.service - D-Bus User Message Bus.
+Oct 20 16:29:28 MyLinuxVM dbus-broker-launch[2553]: Policy to allow eavesdropping in /usr/share/dbus-1/session.conf +31: Eavesdropping is deprecated and ignored
+Oct 20 16:29:28 MyLinuxVM dbus-broker-launch[2553]: Policy to allow eavesdropping in /usr/share/dbus-1/session.conf +33: Eavesdropping is deprecated and ignored
+Oct 20 16:29:28 MyLinuxVM dbus-broker-launch[2553]: Ready
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Created slice app-gnome\x2dsession\x2dmanager.slice - Slice /app/gnome-session-manager.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target gnome-session-wayland.target - GNOME Wayland Session.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target org.gnome.Shell.target - GNOME Shell.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting gnome-session-monitor.service - Monitor Session leader for GNOME Session...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting xdg-user-dirs.service - User folders update...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Finished xdg-user-dirs.service - User folders update.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target graphical-session-pre.target - Session services which should run early before the graphical session is brought up.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started gnome-session-monitor.service - Monitor Session leader for GNOME Session.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target gnome-session-pre.target - Tasks to be run before GNOME Session starts.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting gnome-session-manager@gnome.service - GNOME Session Manager (session: gnome)...
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-daemon[2633]: discover_other_daemon: 1
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started app-gnome-gnome\x2dkeyring\x2dpkcs11-2627.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-pkcs11.desktop[2633]: discover_other_daemon: 1
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started app-gnome-gnome\x2dkeyring\x2dsecrets-2637.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started app-gnome-gnome\x2dkeyring\x2dssh-2632.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-daemon[2638]: discover_other_daemon: 1
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-ssh.desktop[2638]: discover_other_daemon: 1SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-daemon[2641]: discover_other_daemon: 1
+Oct 20 16:29:28 MyLinuxVM gnome-keyring-secrets.desktop[2641]: discover_other_daemon: 1SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started gnome-session-manager@gnome.service - GNOME Session Manager (session: gnome).
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Reached target gnome-session-manager.target - GNOME Session Manager is ready.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting org.gnome.Shell@wayland.service - GNOME Shell on Wayland...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: org.gnome.Shell@x11.service - GNOME Shell on X11 was skipped because of an unmet condition check (ConditionEnvironment=XDG_SESSION_TYPE=x11).
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: app-gnome-xdg\x2duser\x2ddirs-2645.scope: PID 2645 vanished before we could move it to target cgroup '/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome-xdg\x2duser\x2ddirs-2645.scope', skipping: No such process
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: app-gnome-xdg\x2duser\x2ddirs-2645.scope: No PIDs left to attach to the scope's control group, refusing.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: app-gnome-xdg\x2duser\x2ddirs-2645.scope: Failed with result 'resources'.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Failed to start app-gnome-xdg\x2duser\x2ddirs-2645.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Starting gvfs-daemon.service - Virtual filesystem service...
+Oct 20 16:29:28 MyLinuxVM systemd[2515]: Started gvfs-daemon.service - Virtual filesystem service.
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Running GNOME Shell (using mutter 47.5) as a Wayland display server
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:28 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 2673 of process 2646 (/usr/bin/gnome-shell) owned by '1000' high priority at nice level -15.
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Thread 'KMS thread' will be using high priority scheduling
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: libEGL warning: egl: failed to create dri2 screen
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: libEGL warning: egl: failed to create dri2 screen
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: libEGL warning: egl: failed to create dri2 screen
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Added device '/dev/dri/card0' (vmwgfx) using atomic mode setting.
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Failed to initialize accelerated iGPU/dGPU framebuffer sharing: Not hardware accelerated
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Created gbm renderer for '/dev/dri/card0'
+Oct 20 16:29:28 MyLinuxVM gnome-shell[2646]: Boot VGA GPU /dev/dri/card0 selected as primary
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Starting at-spi-dbus-bus.service - Accessibility services bus...
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Started at-spi-dbus-bus.service - Accessibility services bus.
+Oct 20 16:29:29 MyLinuxVM dbus-broker-launch[2692]: Ready
+Oct 20 16:29:29 MyLinuxVM gnome-shell[2646]: Using public X11 display :0, (using :1 for managed services)
+Oct 20 16:29:29 MyLinuxVM gnome-shell[2646]: Using Wayland display name 'wayland-0'
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.18\x2dorg.a11y.atspi.Registry.slice - Slice /app/dbus-:1.18-org.a11y.atspi.Registry.
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Started dbus-:1.18-org.a11y.atspi.Registry@0.service.
+Oct 20 16:29:29 MyLinuxVM at-spi2-registryd[2694]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Oct 20 16:29:29 MyLinuxVM gnome-shell[2646]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+Oct 20 16:29:29 MyLinuxVM gnome-shell[2646]: Will monitor session 2
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Shell.Screencast.slice - Slice /app/dbus-:1.2-org.gnome.Shell.Screencast.
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Shell.Screencast@0.service.
+Oct 20 16:29:29 MyLinuxVM systemd[2515]: Starting xdg-permission-store.service - sandboxed app permission store...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Shell.CalendarServer.slice - Slice /app/dbus-:1.2-org.gnome.Shell.CalendarServer.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Shell.CalendarServer@0.service.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Started xdg-permission-store.service - sandboxed app permission store.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting evolution-source-registry.service - Evolution source registry...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Shell.Notifications.slice - Slice /app/dbus-:1.2-org.gnome.Shell.Notifications.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Shell.Notifications@0.service.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Started org.gnome.Shell@wayland.service - GNOME Shell on Wayland.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Reached target gnome-session-initialized.target - GNOME Session is initialized.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: gnome-session-x11-services.target - GNOME session X11 services is inactive.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Dependency failed for org.gnome.SettingsDaemon.XSettings.service - GNOME XSettings service.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: org.gnome.SettingsDaemon.XSettings.service: Job org.gnome.SettingsDaemon.XSettings.service/start failed with result 'dependency'.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: gnome-session-x11-services-ready.target: Job gnome-session-x11-services-ready.target/verify-active failed with result 'dependency'.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Reached target gnome-session@gnome.target - GNOME Session (session: gnome).
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.XSettings.target - GNOME XSettings target.
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting gnome-session-signal-init.service - Signal initialization done to GNOME Session Manager...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.freedesktop.IBus.session.GNOME.service - IBus Daemon for GNOME...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.A11ySettings.service - GNOME accessibility service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Color.service - GNOME color management service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Datetime.service - GNOME date & time service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Housekeeping.service - GNOME maintenance of expirable data service...
+Oct 20 16:29:30 MyLinuxVM gnome-shell[2646]: Error looking up permission: GDBus.Error:org.freedesktop.portal.Error.NotFound: No entry for geolocation
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Keyboard.service - GNOME keyboard configuration service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.MediaKeys.service - GNOME keyboard shortcuts service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Power.service - GNOME power management service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.PrintNotifications.service - GNOME printer notifications service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Rfkill.service - GNOME RFKill support service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.ScreensaverProxy.service - GNOME FreeDesktop screensaver service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Sharing.service - GNOME file sharing service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Smartcard.service - GNOME smartcard service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Sound.service - GNOME sound sample caching service...
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.UsbProtection.service - GNOME USB protection service...
+Oct 20 16:29:30 MyLinuxVM vmware-user.desktop[2793]: vmware-user: could not open /proc/fs/vmblock/dev
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.Wacom.service - GNOME Wacom tablet support service...
+Oct 20 16:29:30 MyLinuxVM gnome-session-binary[2620]: Entering running state
+Oct 20 16:29:30 MyLinuxVM systemd[2515]: Finished gnome-session-signal-init.service - Signal initialization done to GNOME Session Manager.
+Oct 20 16:29:30 MyLinuxVM gnome-session[2620]: gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2774: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2774: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session[2620]: gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2781: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2781: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session[2620]: gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2787: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:30 MyLinuxVM gnome-session-binary[2620]: GnomeDesktop-WARNING: Could not create transient scope for PID 2787: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.ScreensaverProxy.service - GNOME FreeDesktop screensaver service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Rfkill.service - GNOME RFKill support service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.UsbProtection.service - GNOME USB protection service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Sharing.service - GNOME file sharing service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Housekeeping.service - GNOME maintenance of expirable data service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Datetime.service - GNOME date & time service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Sound.service - GNOME sound sample caching service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.freedesktop.IBus.session.GNOME.service - IBus Daemon for GNOME.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-libcanberra\x2dlogin\x2dsound-2799.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-org.gnome.Evolution\x2dalarm\x2dnotify-2785.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-org.gnome.SettingsDaemon.DiskUtilityNotify-2790.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-org.gnome.Software-2809.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started app-gnome-vboxclient-2795.scope - Application launched by gnome-session-binary.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.OnlineAccounts.slice - Slice /app/dbus-:1.2-org.gnome.OnlineAccounts.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.ScreenSaver.slice - Slice /app/dbus-:1.2-org.gnome.ScreenSaver.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Datetime.target - GNOME date & time target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Housekeeping.target - GNOME maintenance of expirable data target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Rfkill.target - GNOME RFKill support target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.ScreensaverProxy.target - GNOME FreeDesktop screensaver target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Sharing.target - GNOME file sharing target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Sound.target - GNOME sound sample caching target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.UsbProtection.target - GNOME USB protection target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.OnlineAccounts@0.service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.ScreenSaver@0.service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting gvfs-udisks2-volume-monitor.service - Virtual filesystem service - disk device monitor...
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started evolution-source-registry.service - Evolution source registry.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.A11ySettings.service - GNOME accessibility service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.freedesktop.portal.IBus.slice - Slice /app/dbus-:1.2-org.freedesktop.portal.IBus.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.A11ySettings.target - GNOME accessibility target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.freedesktop.portal.IBus@0.service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Smartcard.service - GNOME smartcard service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Smartcard.target - GNOME smartcard target.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started gvfs-udisks2-volume-monitor.service - Virtual filesystem service - disk device monitor.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting gvfs-mtp-volume-monitor.service - Virtual filesystem service - Media Transfer Protocol monitor...
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started gvfs-mtp-volume-monitor.service - Virtual filesystem service - Media Transfer Protocol monitor.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting evolution-calendar-factory.service - Evolution calendar service...
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting gvfs-gphoto2-volume-monitor.service - Virtual filesystem service - digital camera monitor...
+Oct 20 16:29:31 MyLinuxVM goa-daemon[2926]: goa-daemon version 3.52.8 starting
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started gvfs-gphoto2-volume-monitor.service - Virtual filesystem service - digital camera monitor.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Identity.slice - Slice /app/dbus-:1.2-org.gnome.Identity.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Identity@0.service.
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Starting gvfs-goa-volume-monitor.service - Virtual filesystem service - GNOME Online Accounts monitor...
+Oct 20 16:29:31 MyLinuxVM systemd[2515]: Started gvfs-goa-volume-monitor.service - Virtual filesystem service - GNOME Online Accounts monitor.
+Oct 20 16:29:31 MyLinuxVM systemd[1]: Starting sssd-kcm.service - SSSD Kerberos Cache Manager...
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started evolution-calendar-factory.service - Evolution calendar service.
+Oct 20 16:29:32 MyLinuxVM cupsd[1396]: REQUEST localhost - - "POST / HTTP/1.1" 200 368 Create-Printer-Subscriptions successful-ok
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Starting evolution-addressbook-factory.service - Evolution address book service...
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.PrintNotifications.service - GNOME printer notifications service.
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.PrintNotifications.target - GNOME printer notifications target.
+Oct 20 16:29:32 MyLinuxVM gsd-usb-protect[2779]: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started evolution-addressbook-factory.service - Evolution address book service.
+Oct 20 16:29:32 MyLinuxVM systemd[1]: Started sssd-kcm.service - SSSD Kerberos Cache Manager.
+Oct 20 16:29:32 MyLinuxVM sssd_kcm[3082]: Starting up
+Oct 20 16:29:32 MyLinuxVM goa-identity-se[3022]: GoaKerberosIdentityManager: Using polling for change notification for credential cache type 'KCM'
+Oct 20 16:29:32 MyLinuxVM gnome-shell[3036]: Xwayland glamor: GBM Wayland interfaces not available
+Oct 20 16:29:32 MyLinuxVM gnome-shell[3036]: Failed to initialize glamor, falling back to sw
+Oct 20 16:29:32 MyLinuxVM udisksd[1034]: Mounted /dev/sr0 at /run/media/ajithesh2002/VBox_GAs_7.1.12 on behalf of uid 1000
+Oct 20 16:29:32 MyLinuxVM NetworkManager[1387]: <info>  [1760957972.7713] agent-manager: agent[4cbdd9e109d598bd,:1.81/org.gnome.Shell.NetworkAgent/1000]: agent registered
+Oct 20 16:29:32 MyLinuxVM gnome-shell[3036]: VMware: No 3D enabled (0, Success).
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started pipewire.service - PipeWire Multimedia Service.
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started wireplumber.service - Multimedia Service Session Manager.
+Oct 20 16:29:32 MyLinuxVM systemd[2515]: Started pipewire-pulse.service - PipeWire PulseAudio.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Reached target gnome-session-x11-services.target - GNOME session X11 services.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Starting org.gnome.SettingsDaemon.XSettings.service - GNOME XSettings service...
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3146 of process 3146 (/usr/bin/pipewire) owned by '1000' high priority at nice level -11.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.alsa: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: > Warning:          Unsupported maximum keycode 708, clipping.
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: >                   X11 cannot support keycodes above 255.
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: > Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3140 of process 3140 (/usr/bin/pipewire) owned by '1000' high priority at nice level -11.
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: > Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+Oct 20 16:29:33 MyLinuxVM gnome-shell[3195]: Errors from xkbcomp are not fatal to the X server
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3162 of process 3140 (/usr/bin/pipewire) owned by '1000' RT at priority 20.
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3168 of process 3146 (/usr/bin/pipewire) owned by '1000' RT at priority 20.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Color.service - GNOME color management service.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Color.target - GNOME color management target.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Keyboard.service - GNOME keyboard configuration service.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Keyboard.target - GNOME keyboard configuration target.
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3142 of process 3142 (/usr/bin/wireplumber) owned by '1000' high priority at nice level -11.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.MediaKeys.service - GNOME keyboard shortcuts service.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.MediaKeys.target - GNOME keyboard shortcuts target.
+Oct 20 16:29:33 MyLinuxVM systemd[2515]: Starting xdg-desktop-portal.service - Portal service...
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: spa.bluez5: BlueZ system service is not available
+Oct 20 16:29:33 MyLinuxVM libcanberra-login-sound.desktop[2799]: Failed to play sound: File or data not found
+Oct 20 16:29:33 MyLinuxVM rtkit-daemon[1021]: Successfully made thread 3174 of process 3142 (/usr/bin/wireplumber) owned by '1000' RT at priority 20.
+Oct 20 16:29:33 MyLinuxVM wireplumber[3142]: [0:00:35.467266809] [3142] #033[1;32m INFO #033[1;37mCamera #033[1;34mcamera_manager.cpp:325 #033[0mlibcamera v0.3.2
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Wacom.service - GNOME Wacom tablet support service.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Wacom.target - GNOME Wacom tablet support target.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Starting xdg-document-portal.service - flatpak document portal service...
+Oct 20 16:29:34 MyLinuxVM gsd-xsettings[3187]: Failed to get current UI scaling factor: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Destination does not exist
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Started xdg-document-portal.service - flatpak document portal service.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.XSettings.service - GNOME XSettings service.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target gnome-session-x11-services-ready.target - GNOME session X11 services.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Started org.gnome.SettingsDaemon.Power.service - GNOME power management service.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target org.gnome.SettingsDaemon.Power.target - GNOME power management target.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target gnome-session.target - GNOME Session.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target gnome-session-wayland@gnome.target - GNOME Wayland Session (session: gnome).
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Reached target graphical-session.target - Current graphical user session.
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: gnome-initial-setup-first-login.service - GNOME Initial Setup was skipped because of an unmet condition check (ConditionPathExists=!/home/ajithesh2002/.config/gnome-initial-setup-done).
+Oct 20 16:29:34 MyLinuxVM systemd[2515]: Starting xdg-desktop-portal-gnome.service - Portal service (GNOME implementation)...
+Oct 20 16:29:34 MyLinuxVM gsd-media-keys[2755]: Failed to grab accelerator for keybinding settings:hibernate
+Oct 20 16:29:34 MyLinuxVM gsd-media-keys[2755]: Failed to grab accelerator for keybinding settings:playback-repeat
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476304 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476308 main     Log opened 2025-10-20T10:59:34.475672000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476789 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476842 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.476977 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477008 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477009 main     Process ID: 3301
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477009 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477066 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477198 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.477614 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.483346 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.483593 main      Service: Shared Clipboard
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3301]: 10:59:34.497820 main      Daemonizing service ...
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.504431 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.504434 main     Log opened 2025-10-20T10:59:34.504422000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505340 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505440 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505548 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505554 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505554 main     Process ID: 3306
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505555 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505564 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505678 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.505991 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.507848 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.507993 main      Service: Seamless Mode Support
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3306]: 10:59:34.508115 main      Daemonizing service ...
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.534558 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.534560 main     Log opened 2025-10-20T10:59:34.534553000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535229 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535362 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535395 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535424 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535425 main     Process ID: 3313
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535425 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535529 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.535737 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.536340 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.537814 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.537878 main      Service: Drag'n'Drop
+Oct 20 16:29:34 MyLinuxVM kernel: traps: VBoxClient[3311] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3313]: 10:59:34.539301 main      Daemonizing service ...
+Oct 20 16:29:34 MyLinuxVM systemd-coredump[3317]: Process 3307 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:34 MyLinuxVM systemd[1]: Created slice system-systemd\x2dcoredump.slice - Slice /system/systemd-coredump.
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.564769 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.564772 main     Log opened 2025-10-20T10:59:34.564761000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565536 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565620 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565652 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565694 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565695 main     Process ID: 3320
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565695 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565753 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.565910 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.567910 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM systemd[1]: Started systemd-coredump@0-3317-0.service - Process Core Dump (PID 3317/UID 0).
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.615119 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.615175 main      Service: VirtualBox host version check
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3320]: 10:59:34.615402 main      Daemonizing service ...
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639107 main     VBoxClient 7.1.12 r169651 (verbosity: 0) linux.amd64 (Jul 14 2025 14:21:53) release log
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639110 main     Log opened 2025-10-20T10:59:34.639102000Z
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639142 main     OS Product: Linux
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639145 main     OS Release: 6.12.0-140.el10.x86_64
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639149 main     OS Version: #1 SMP PREEMPT_DYNAMIC Thu Oct  9 11:30:58 UTC 2025
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639153 main     Executable: /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639154 main     Process ID: 3328
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639154 main     Package type: LINUX_64BITS_GENERIC
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639159 main      VBoxClient 7.1.12 r169651 started. Verbose level = 0
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.639255 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.641540 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.644635 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.644674 main      Service: VMSVGA display assistant
+Oct 20 16:29:34 MyLinuxVM vboxclient.desktop[3328]: 10:59:34.645389 main      Daemonizing service ...
+Oct 20 16:29:35 MyLinuxVM systemd-coredump[3321]: Process 3307 (VBoxClient) of user 1000 dumped core.#012#012Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.#012Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64#012Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64#012Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64#012Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64#012Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64#012Stack trace of thread 3311:#012#0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)#012#1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)#012#2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3310:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000416559 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x16559)#012#4  0x000000000041838a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1838a)#012#5  0x0000000000417d6a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x17d6a)#012#6  0x0000000000404860 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x4860)#012#7  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#8  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#9  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#10 0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3307:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)#012#4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)#012#5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)#012#6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)#012ELF object binary architecture: AMD x86-64
+Oct 20 16:29:35 MyLinuxVM systemd[1]: systemd-coredump@0-3317-0.service: Deactivated successfully.
+Oct 20 16:29:35 MyLinuxVM gnome-shell[2646]: GNOME Shell started at Mon Oct 20 2025 16:29:30 GMT+0530 (India Standard Time)
+Oct 20 16:29:35 MyLinuxVM gnome-shell[2646]: Registering session with GDM
+Oct 20 16:29:35 MyLinuxVM cupsd[1396]: REQUEST localhost - - "POST / HTTP/1.1" 200 151 Cancel-Subscription successful-ok
+Oct 20 16:29:36 MyLinuxVM systemd[1]: run-user-42-doc.mount: Deactivated successfully.
+Oct 20 16:29:36 MyLinuxVM systemd-logind[1030]: Session c1 logged out. Waiting for processes to exit.
+Oct 20 16:29:36 MyLinuxVM systemd[2515]: Started xdg-desktop-portal-gnome.service - Portal service (GNOME implementation).
+Oct 20 16:29:36 MyLinuxVM systemd[1]: session-c1.scope: Deactivated successfully.
+Oct 20 16:29:36 MyLinuxVM systemd[1]: session-c1.scope: Consumed 6.276s CPU time, 414.6M memory peak.
+Oct 20 16:29:36 MyLinuxVM systemd-logind[1030]: Removed session c1.
+Oct 20 16:29:36 MyLinuxVM systemd[2515]: Starting xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation)...
+Oct 20 16:29:36 MyLinuxVM systemd[2515]: Started xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation).
+Oct 20 16:29:36 MyLinuxVM systemd[2515]: Started xdg-desktop-portal.service - Portal service.
+Oct 20 16:29:36 MyLinuxVM mutter-x11-fram[3303]: Using GtkSettings:gtk-application-prefer-dark-theme with libadwaita is unsupported. Please use AdwStyleManager:color-scheme instead.
+Oct 20 16:29:36 MyLinuxVM systemd[1]: Starting fwupd.service - Firmware update daemon...
+Oct 20 16:29:36 MyLinuxVM fwupd[3414]: 10:59:36.865 FuMain               fwupd 1.9.31 ready for requests (locale en_IN.UTF-8)
+Oct 20 16:29:36 MyLinuxVM systemd[1]: Started fwupd.service - Firmware update daemon.
+Oct 20 16:29:37 MyLinuxVM PackageKit[2016]: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Oct 20 16:29:37 MyLinuxVM PackageKit[2016]: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Oct 20 16:29:37 MyLinuxVM gnome-software[2809]: Only 0 apps for curated list, hiding
+Oct 20 16:29:37 MyLinuxVM gnome-software[2809]: Only 1 apps for recent list, hiding
+Oct 20 16:29:40 MyLinuxVM kernel: traps: VBoxClient[3452] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:40 MyLinuxVM systemd-coredump[3453]: Process 3449 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:40 MyLinuxVM systemd[1]: Started systemd-coredump@1-3453-0.service - Process Core Dump (PID 3453/UID 0).
+Oct 20 16:29:40 MyLinuxVM gnome-shell[2646]: Received error from D-Bus search provider firefox.desktop: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Calculator.SearchProvider.slice - Slice /app/dbus-:1.2-org.gnome.Calculator.SearchProvider.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Characters.slice - Slice /app/dbus-:1.2-org.gnome.Characters.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Nautilus.slice - Slice /app/dbus-:1.2-org.gnome.Nautilus.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Settings.SearchProvider.slice - Slice /app/dbus-:1.2-org.gnome.Settings.SearchProvider.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.clocks.slice - Slice /app/dbus-:1.2-org.gnome.clocks.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Calculator.SearchProvider@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Characters@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Nautilus@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Settings.SearchProvider@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.clocks@0.service.
+Oct 20 16:29:40 MyLinuxVM systemd-coredump[3454]: Process 3449 (VBoxClient) of user 1000 dumped core.#012#012Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.#012Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64#012Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64#012Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64#012Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64#012Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64#012Stack trace of thread 3452:#012#0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)#012#1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)#012#2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3449:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)#012#4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)#012#5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)#012#6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)#012ELF object binary architecture: AMD x86-64
+Oct 20 16:29:40 MyLinuxVM systemd[1]: systemd-coredump@1-3453-0.service: Deactivated successfully.
+Oct 20 16:29:40 MyLinuxVM nautilus[3461]: Connecting to org.freedesktop.Tracker3.Miner.Files
+Oct 20 16:29:40 MyLinuxVM gnome-shell[2646]: Received error from D-Bus search provider firefox.desktop: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Created slice background.slice - User Background Tasks Slice.
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Starting tracker-miner-fs-3.service - Tracker file system data miner...
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Starting dconf.service - User preferences database...
+Oct 20 16:29:41 MyLinuxVM gnome-character[3460]: JS LOG: Characters Application started
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Started dconf.service - User preferences database.
+Oct 20 16:29:41 MyLinuxVM systemd[2515]: Started tracker-miner-fs-3.service - Tracker file system data miner.
+Oct 20 16:29:42 MyLinuxVM systemd[2515]: Created slice app-dbus\x2d:1.2\x2dorg.gnome.Ptyxis.slice - Slice /app/dbus-:1.2-org.gnome.Ptyxis.
+Oct 20 16:29:42 MyLinuxVM systemd[2515]: Started dbus-:1.2-org.gnome.Ptyxis@0.service.
+Oct 20 16:29:42 MyLinuxVM kernel: evm: overlay not supported
+Oct 20 16:29:42 MyLinuxVM podman[3571]: 2025-10-20 16:29:42.753249012 +0530 IST m=+0.131674745 system refresh
+Oct 20 16:29:42 MyLinuxVM systemd[2515]: Created slice user.slice - Slice /user.
+Oct 20 16:29:42 MyLinuxVM systemd[2515]: Started podman-pause-f7af02aa.scope.
+Oct 20 16:29:43 MyLinuxVM systemd[2515]: Started ptyxis-spawn-04e2f92c-2925-4ffd-882d-a4b39df19e72.scope - [systemd-run] /usr/bin/bash.
+Oct 20 16:29:43 MyLinuxVM gnome-shell[2646]: Invalid sequence for VSYNC frame info
+Oct 20 16:29:45 MyLinuxVM systemd[1]: fprintd.service: Deactivated successfully.
+Oct 20 16:29:45 MyLinuxVM kernel: traps: VBoxClient[3642] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:45 MyLinuxVM systemd-coredump[3643]: Process 3639 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:45 MyLinuxVM systemd[1]: Started systemd-coredump@2-3643-0.service - Process Core Dump (PID 3643/UID 0).
+Oct 20 16:29:45 MyLinuxVM systemd-coredump[3644]: Process 3639 (VBoxClient) of user 1000 dumped core.#012#012Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.#012Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64#012Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64#012Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64#012Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64#012Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64#012Stack trace of thread 3642:#012#0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)#012#1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)#012#2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3639:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)#012#4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)#012#5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)#012#6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)#012ELF object binary architecture: AMD x86-64
+Oct 20 16:29:45 MyLinuxVM systemd[1]: systemd-coredump@2-3643-0.service: Deactivated successfully.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Stopping user@42.service - User Manager for UID 42...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Activating special unit exit.target...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target default.target - Main User Target.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopping pipewire-pulse.service - PipeWire PulseAudio...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped pipewire-pulse.service - PipeWire PulseAudio.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopping wireplumber.service - Multimedia Service Session Manager...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped wireplumber.service - Multimedia Service Session Manager.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopping pipewire.service - PipeWire Multimedia Service...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped pipewire.service - PipeWire Multimedia Service.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target basic.target - Basic System.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target paths.target - Paths.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target sockets.target - Sockets.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped target timers.target - Timers.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped systemd-tmpfiles-clean.timer - Daily Cleanup of User's Temporary Directories.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Closed pipewire-pulse.socket - PipeWire PulseAudio.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Closed pipewire.socket - PipeWire Multimedia System Sockets.
+Oct 20 16:29:46 MyLinuxVM dbus-broker[1720]: Dispatched 356 messages @ 5(±37)μs / message.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopping dbus-broker.service - D-Bus User Message Bus...
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped systemd-tmpfiles-setup.service - Create User Files and Directories.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Stopped dbus-broker.service - D-Bus User Message Bus.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Removed slice session.slice - User Core Session Slice.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Closed dbus.socket - D-Bus User Message Bus Socket.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Removed slice app.slice - User Application Slice.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Reached target shutdown.target - Shutdown.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Finished systemd-exit.service - Exit the Session.
+Oct 20 16:29:46 MyLinuxVM systemd[1451]: Reached target exit.target - Exit the Session.
+Oct 20 16:29:46 MyLinuxVM systemd-logind[1030]: Removed session 1.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: user@42.service: Deactivated successfully.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Stopped user@42.service - User Manager for UID 42.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Stopping user-runtime-dir@42.service - User Runtime Directory /run/user/42...
+Oct 20 16:29:46 MyLinuxVM systemd[1]: run-user-42.mount: Deactivated successfully.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: user-runtime-dir@42.service: Deactivated successfully.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Stopped user-runtime-dir@42.service - User Runtime Directory /run/user/42.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: Removed slice user-42.slice - User Slice of UID 42.
+Oct 20 16:29:46 MyLinuxVM systemd[1]: user-42.slice: Consumed 6.948s CPU time, 442.3M memory peak.
+Oct 20 16:29:50 MyLinuxVM kernel: traps: VBoxClient[3670] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:50 MyLinuxVM systemd-coredump[3671]: Process 3667 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:50 MyLinuxVM systemd[1]: Started systemd-coredump@3-3671-0.service - Process Core Dump (PID 3671/UID 0).
+Oct 20 16:29:51 MyLinuxVM systemd-coredump[3672]: Process 3667 (VBoxClient) of user 1000 dumped core.#012#012Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.#012Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64#012Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64#012Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64#012Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64#012Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64#012Stack trace of thread 3670:#012#0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)#012#1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)#012#2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3667:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)#012#4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)#012#5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)#012#6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)#012ELF object binary architecture: AMD x86-64
+Oct 20 16:29:51 MyLinuxVM systemd[1]: systemd-coredump@3-3671-0.service: Deactivated successfully.
+Oct 20 16:29:51 MyLinuxVM gnome-character[3460]: JS LOG: Characters Application exiting
+Oct 20 16:29:51 MyLinuxVM systemd[2515]: dbus-:1.2-org.gnome.Characters@0.service: Consumed 788ms CPU time, 108.3M memory peak.
+Oct 20 16:29:56 MyLinuxVM kernel: traps: VBoxClient[3687] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:29:56 MyLinuxVM systemd-coredump[3688]: Process 3684 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:29:56 MyLinuxVM systemd[1]: Started systemd-coredump@4-3688-0.service - Process Core Dump (PID 3688/UID 0).
+Oct 20 16:29:56 MyLinuxVM systemd-coredump[3689]: Process 3684 (VBoxClient) of user 1000 dumped core.#012#012Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.#012Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64#012Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64#012Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64#012Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64#012Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64#012Stack trace of thread 3687:#012#0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)#012#1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)#012#2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3684:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)#012#4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)#012#5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)#012#6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)#012ELF object binary architecture: AMD x86-64
+Oct 20 16:29:56 MyLinuxVM systemd[1]: systemd-coredump@4-3688-0.service: Deactivated successfully.
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Starting logrotate.service - Rotate log files...
+Oct 20 16:30:01 MyLinuxVM kernel: traps: VBoxClient[3699] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Starting fprintd.service - Fingerprint Authentication Daemon...
+Oct 20 16:30:01 MyLinuxVM systemd-coredump[3700]: Process 3696 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Started systemd-coredump@5-3700-0.service - Process Core Dump (PID 3700/UID 0).
+Oct 20 16:30:01 MyLinuxVM systemd[1]: logrotate.service: Deactivated successfully.
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Finished logrotate.service - Rotate log files.
+Oct 20 16:30:01 MyLinuxVM systemd[1]: Started fprintd.service - Fingerprint Authentication Daemon.
+Oct 20 16:30:01 MyLinuxVM systemd-coredump[3702]: Process 3696 (VBoxClient) of user 1000 dumped core.#012#012Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.#012Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64#012Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64#012Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64#012Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64#012Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64#012Stack trace of thread 3699:#012#0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)#012#1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)#012#2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3698:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000416559 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x16559)#012#4  0x000000000041838a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1838a)#012#5  0x0000000000417d6a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x17d6a)#012#6  0x0000000000404860 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x4860)#012#7  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#8  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#9  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#10 0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3696:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)#012#4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)#012#5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)#012#6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)#012ELF object binary architecture: AMD x86-64
+Oct 20 16:30:01 MyLinuxVM systemd[1]: systemd-coredump@5-3700-0.service: Deactivated successfully.
+Oct 20 16:30:03 MyLinuxVM systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 20 16:30:03 MyLinuxVM systemd[1]: systemd-localed.service: Deactivated successfully.
+Oct 20 16:30:05 MyLinuxVM systemd-logind[1030]: Existing logind session ID 3 used by new audit session, ignoring.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Created slice user-0.slice - User Slice of UID 0.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Starting user-runtime-dir@0.service - User Runtime Directory /run/user/0...
+Oct 20 16:30:05 MyLinuxVM systemd-logind[1030]: New session c2 of user root.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Finished user-runtime-dir@0.service - User Runtime Directory /run/user/0.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Starting user@0.service - User Manager for UID 0...
+Oct 20 16:30:05 MyLinuxVM systemd-logind[1030]: New session 4 of user root.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Queued start job for default target default.target.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Created slice app.slice - User Application Slice.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: grub-boot-success.timer - Mark boot as successful after the user session has run 2 minutes was skipped because of an unmet condition check (ConditionUser=!@system).
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of User's Temporary Directories.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target paths.target - Paths.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target timers.target - Timers.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: pipewire-pulse.socket - PipeWire PulseAudio was skipped because of an unmet condition check (ConditionUser=!root).
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: pipewire.socket - PipeWire Multimedia System Sockets was skipped because of an unmet condition check (ConditionUser=!root).
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Starting systemd-tmpfiles-setup.service - Create User Files and Directories...
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Finished systemd-tmpfiles-setup.service - Create User Files and Directories.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target sockets.target - Sockets.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target basic.target - Basic System.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: gnome-initial-setup-copy-worker.service - GNOME Initial Setup Copy Worker was skipped because of an unmet condition check (ConditionUser=!@system).
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Reached target default.target - Main User Target.
+Oct 20 16:30:05 MyLinuxVM systemd[3734]: Startup finished in 325ms.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Started user@0.service - User Manager for UID 0.
+Oct 20 16:30:05 MyLinuxVM systemd[1]: Started session-c2.scope - Session c2 of User root.
+Oct 20 16:30:06 MyLinuxVM systemd[1]: Starting systemd-hostnamed.service - Hostname Service...
+Oct 20 16:30:06 MyLinuxVM systemd[1]: Started systemd-hostnamed.service - Hostname Service.
+Oct 20 16:30:06 MyLinuxVM kernel: traps: VBoxClient[3776] trap int3 ip:41dd1b sp:7f5a82cb6cd0 error:0 in VBoxClient[1dd1b,400000+bb000]
+Oct 20 16:30:06 MyLinuxVM systemd-coredump[3777]: Process 3773 (VBoxClient) of user 1000 terminated abnormally with signal 5/TRAP, processing...
+Oct 20 16:30:06 MyLinuxVM systemd[1]: Started systemd-coredump@6-3777-0.service - Process Core Dump (PID 3777/UID 0).
+Oct 20 16:30:06 MyLinuxVM systemd-coredump[3778]: Process 3773 (VBoxClient) of user 1000 dumped core.#012#012Module /opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient without build-id.#012Module libXau.so.6 from rpm libXau-1.0.11-8.el10.x86_64#012Module libxcb.so.1 from rpm libxcb-1.17.0-3.el10.x86_64#012Module libX11.so.6 from rpm libX11-1.8.10-1.el10.x86_64#012Module libffi.so.8 from rpm libffi-3.4.4-10.el10.x86_64#012Module libwayland-client.so.0 from rpm wayland-1.23.1-1.el10.x86_64#012Stack trace of thread 3776:#012#0  0x000000000041dd1b n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dd1b)#012#1  0x000000000041dc94 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1dc94)#012#2  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#3  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#4  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#5  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3774:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x0000000000434c30 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x34c30)#012#2  0x0000000000450bfb n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50bfb)#012#3  0x000000000043566a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x3566a)#012#4  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#5  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#6  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#7  0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3775:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000416559 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x16559)#012#4  0x000000000041838a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x1838a)#012#5  0x0000000000417d6a n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x17d6a)#012#6  0x0000000000404860 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x4860)#012#7  0x000000000045041c n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5041c)#012#8  0x00000000004355d0 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x355d0)#012#9  0x00007f5a91366168 start_thread (libc.so.6 + 0x95168)#012#10 0x00007f5a913d6afc __clone3 (libc.so.6 + 0x105afc)#012#012Stack trace of thread 3773:#012#0  0x00007f5a913d48fd syscall (libc.so.6 + 0x1038fd)#012#1  0x00000000004344e2 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x344e2)#012#2  0x0000000000450066 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x50066)#012#3  0x0000000000405123 n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x5123)#012#4  0x00007f5a912fb58e __libc_start_call_main (libc.so.6 + 0x2a58e)#012#5  0x00007f5a912fb649 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x2a649)#012#6  0x00000000004044aa n/a (/opt/VBoxGuestAdditions-7.1.12/bin/VBoxClient + 0x44aa)#012ELF object binary architecture: AMD x86-64
+Oct 20 16:30:06 MyLinuxVM systemd[1]: systemd-coredump@6-3777-0.service: Deactivated successfully.
+
+
+Keyword summary:
+
+error: 1036
+fail: 839
+failed: 807
+timeout: 15
+corrupt: 1
+=== Open Files & Listening Ports ===
+
+Open files (lsof) top 30:
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1000/gvfs
+      Output information may be incomplete.
+lsof: WARNING: can't stat() fuse.portal file system /run/user/1000/doc
+      Output information may be incomplete.
+COMMAND    PID  TID TASKCMD             USER   FD      TYPE             DEVICE  SIZE/OFF       NODE NAME
+systemd      1                          root  cwd       DIR              253,0       235        128 /
+systemd      1                          root  rtd       DIR              253,0       235        128 /
+systemd      1                          root  txt       REG              253,0    147840    1240050 /usr/lib/systemd/systemd
+systemd      1                          root  mem       REG              253,0    729608     285853 /usr/lib64/libzstd.so.1.5.5
+systemd      1                          root  mem       REG              253,0    436736     285888 /usr/lib64/libbpf.so.1.6.0
+systemd      1                          root  mem       REG              253,0    390730   17225989 /etc/selinux/targeted/contexts/files/file_contexts.bin
+systemd      1                          root  mem       REG              253,0   5626896    1112763 /usr/lib64/libcrypto.so.3.5.1
+systemd      1                          root  mem       REG              253,0    111872     286020 /usr/lib64/libelf-0.193.so
+systemd      1                          root  mem       REG              253,0    665664     285874 /usr/lib64/libpcre2-8.so.0.13.0
+systemd      1                          root  mem       REG              253,0   2335624        170 /usr/lib64/libc.so.6
+systemd      1                          root  mem       REG              253,0   4901672   51249767 /usr/lib64/systemd/libsystemd-shared-257-16.el10.so
+systemd      1                          root  mem       REG              253,0     49336     400839 /usr/lib64/libeconf.so.0.6.2
+systemd      1                          root  mem       REG              253,0    140824     285830 /usr/lib64/libz.so.1.3.1.zlib-ng
+systemd      1                          root  mem       REG              253,0     28296     400401 /usr/lib64/libattr.so.1.1.2502
+systemd      1                          root  mem       REG              253,0     32296     286071 /usr/lib64/libcap-ng.so.0.0.0
+systemd      1                          root  mem       REG              253,0     73816     400845 /usr/lib64/libpam.so.0.85.1
+systemd      1                          root  mem       REG              253,0    197000     286036 /usr/lib64/libcrypt.so.2.0.0
+systemd      1                          root  mem       REG              253,0     53280     400857 /usr/lib64/libcap.so.2.69
+systemd      1                          root  mem       REG              253,0    242128        257 /usr/lib64/libblkid.so.1.1.0
+systemd      1                          root  mem       REG              253,0     40896     400403 /usr/lib64/libacl.so.1.1.2302
+systemd      1                          root  mem       REG              253,0    135488     286105 /usr/lib64/libseccomp.so.2.5.6
+systemd      1                          root  mem       REG              253,0    333528        288 /usr/lib64/libmount.so.1.1.0
+systemd      1                          root  mem       REG              253,0   2612552   51249765 /usr/lib64/systemd/libsystemd-core-257-16.el10.so
+systemd      1                          root  mem       REG              253,0    720648        172 /usr/lib64/libm.so.6
+systemd      1                          root  mem       REG              253,0    192296     286078 /usr/lib64/libaudit.so.1.0.0
+systemd      1                          root  mem       REG              253,0    186520        144 /usr/lib64/libgcc_s-14-20250617.so.1
+systemd      1                          root  mem       REG              253,0    200672        286 /usr/lib64/libselinux.so.1
+systemd      1                          root  mem       REG              253,0       298   17226047 /etc/selinux/targeted/contexts/files/file_contexts.local.bin
+systemd      1                          root  mem       REG              253,0     14281   17225992 /etc/selinux/targeted/contexts/files/file_contexts.homedirs.bin
+systemd      1                          root  mem       REG               0,20         0         19 /sys/fs/selinux/status
+systemd      1                          root  mem       REG              253,0    929936        167 /usr/lib64/ld-linux-x86-64.so.2
+systemd      1                          root    0u      CHR                1,3       0t0          4 /dev/null
+systemd      1                          root    1u      CHR                1,3       0t0          4 /dev/null
+systemd      1                          root    2u      CHR                1,3       0t0          4 /dev/null
+systemd      1                          root    3w      CHR               1,11       0t0         10 /dev/kmsg
+systemd      1                          root    4u  a_inode               0,16         0       1076 [eventpoll:33,208,225,264,265,266,268,269,270,271,272,273,274,275,276,278,279,280,285,287,288,289,290,291,292,293,294,295,296,297,302,303...]
+systemd      1                          root    5u  a_inode               0,16         0       1076 [signalfd]
+systemd      1                          root    6r  a_inode               0,16         0       1076 inotify
+systemd      1                          root    7u      DIR               0,26         0          1 /sys/fs/cgroup
+
+
+Listening ports:
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                         
+LISTEN 0      4096       127.0.0.1:631       0.0.0.0:*    users:(("cupsd",pid=1396,fd=8))
+LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=1397,fd=7)) 
+LISTEN 0      4096           [::1]:631          [::]:*    users:(("cupsd",pid=1396,fd=7))
+LISTEN 0      4096               *:9090            *:*    users:(("systemd",pid=1,fd=80))
+LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=1397,fd=8)) 
